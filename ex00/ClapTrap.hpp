@@ -19,29 +19,34 @@
 class ClapTrap {
 
 	private :
-		string  _name;
-		int		_health;
-		int		_energy;
-		int		_damage;
+		std::string  _name;
+		int			_health;
+		int			_energy;
+		int			_damage;
 
 	public :
+		/* constructeur */
 		ClapTrap();
-		ClapTrap(string name);
+		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
+		/* destructeur*/
 		~ClapTrap();
-
-		ClapTrap &	operator=(Fixed const &rhs);
-
-		void 	attack(const std::string& target);
- 		void 	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-	
-		string	getName(void) const;
-		int		getHealth(void) const;
-		int		getEnergy(void) const;
-		int		getDamage(void) const; 
-
-		void	setName(string name);
+		/* surcharge d'operateur */
+		ClapTrap &	operator=(ClapTrap const &rhs);
+		/* methodes */
+		void 		attack(const std::string& target);
+ 		void 		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
+		/* getter */
+		std::string	getName(void) const;
+		int			getHealth(void) const;
+		int			getEnergy(void) const;
+		int			getDamage(void) const; 
+		/* setter */
+		void		setName(std::string name);
+		void		setHealth(int health);
+		void		setEnergy(int energy);
+		void		setDamage(int damage);
 };
 
 #endif
