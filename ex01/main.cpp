@@ -26,6 +26,7 @@ int main(){
     fils.beRepaired(10);
     second.attack("third");
     third.beRepaired(1);
+    fils.guardGate();
     second.takeDamage(2);
     first.takeDamage(10);
     first.beRepaired(1);

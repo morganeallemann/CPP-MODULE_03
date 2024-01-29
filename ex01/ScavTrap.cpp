@@ -38,6 +38,6 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs){
 }
 */
 void    ScavTrap::guardGate(){
-    std::cout << "ScavTrap " << this->getName() << "is now in Gate keeper mode ! " << std::endl;
+    std::cout << "ScavTrap " << this->getName() << " is now in Gate keeper mode ! " << std::endl;
     return ;
 }
